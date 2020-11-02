@@ -25,13 +25,16 @@
 <body>
 
     <script>
-        var video = document.querySelector("#videoElement");
-        MediaDevices.getUserMedia({video : true}).then(function(stream){
-            video.srcObject = stream;
+        var constraints = {video: true};
+        navigator.mediaDevices.getUserMedia(constraints)
+        .then(function(mediaStream) {
+            var video = document.querySelector("videoElement");
+            video.srcObject = mediaStream;
+            video.onloadedmetadata = function(e) {
+                video.play();
+            };
         })
-        .catch(function(error) {
-            console.log("Something is wrong!");
-        });
+        .catch(function(err) {console.log(err.name + ": " + err.message);});
     </script>
 
     <div id = "container">
