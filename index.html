@@ -25,16 +25,17 @@
 <body>
 
     <script>
-        var constraints = {video: true};
-        navigator.mediaDevices.getUserMedia(constraints)
-        .then(function(mediaStream) {
-            var video = document.querySelector("videoElement");
-            video.srcObject = mediaStream;
-            video.onloadedmetadata = function(e) {
-                video.play();
-            };
+        var video = document.querySelector("#videoElement");
+
+        if (navigator.mediaDevices.getUserMedia) {
+            navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function (stream) {
+                video.srcObject = stream;
         })
-        .catch(function(err) {console.log(err.name + ": " + err.message);});
+        .catch(function (err0r) {
+            console.log("Something went wrong!");
+        });
+        }
     </script>
 
     <div id = "container">
