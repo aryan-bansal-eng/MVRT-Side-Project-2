@@ -67,7 +67,7 @@
     <script>
         function takePicture()
         {
-            html2canvas(document.querySelector("#container"), {
+            document.querySelector("#container"), {
                 onrendered: function(canvas)
                 {
                     var img = canvas.toDataURL();
