@@ -28,12 +28,17 @@
             font-size: 16px;
             margin: 4px 2px;
             cursor: pointer;
+            display: inline-block;
+        }
+        
+        .center{
             display: flex;
             justify-content: center;
             align-items: center;
             height: 200px;
+            border: 3px solid green;
         }
-
+        
         .button1 {
             background-color: orange;
         }
@@ -61,6 +66,9 @@
         });
         }
     </script>
-    <button class = "button button1" style = "center">Click Me!</button>
+    
+    <div class = "center">
+        <button class = "button button1">Click Me!</button>
+    <div>
 </body>
 </html>
