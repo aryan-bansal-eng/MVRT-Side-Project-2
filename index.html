@@ -67,10 +67,12 @@
     <script>
         function takePicture()
         {
+            console.log("in");
             document.querySelector("#container"), 
             {
                 onrendered : function(canvas)
                 {
+                    console.log("inner");
                     var img = canvas.toDataURL();
                     var image = document.createElement("img");
                     image.src = img;
