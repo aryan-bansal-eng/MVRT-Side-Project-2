@@ -65,13 +65,16 @@
     </script>
     
     <script>
-        html2canvas(document.querySelector("#container"), {
-            onrendered: function(canvas)
-            {
-                var img = canvas.toDataURL();
-                $("#result-image").attr('src', img).show();
-            }
-        });
+        function takePicture()
+        {
+            html2canvas(document.querySelector("#container"), {
+                onrendered: function(canvas)
+                {
+                    var img = canvas.toDataURL();
+                    $("#result-image").attr('src', img).show();
+                }
+            });
+        }
     </script>
     
     <div class = "center">
