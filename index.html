@@ -64,6 +64,16 @@
         }
     </script>
     
+    <script>
+        html2canvas(document.querySelector("#container"), {
+            onrendered: function(canvas)
+            {
+                var img = canvas.toDataURL();
+                $("#result-image").attr('src', img).show();
+            }
+        });
+    </script>
+    
     <div class = "center">
         <button class = "button button1" onClick = "takePicture()">Capture Video</button>
     <div>
