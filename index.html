@@ -72,7 +72,8 @@
                 onrendered: function(canvas)
                 {
                     var img = canvas.toDataURL();
-                    $("#result-image").attr('src', img).show();
+                    var image = document.createElement("img");
+                    picture.appendChild(image);
                 }
             };
         }
@@ -80,6 +81,9 @@
     
     <div class = "center">
         <button class = "button button1" onClick = "takePicture()">Capture Video</button>
-    <div>
+    </div>
+        
+    <div id = "picture">
+    </div>
 </body>
 </html>
