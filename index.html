@@ -69,10 +69,11 @@
         {
             document.querySelector("#container"), 
             {
-                onrendered: function(canvas)
+                onrendered : function(canvas)
                 {
                     var img = canvas.toDataURL();
                     var image = document.createElement("img");
+                    image.src = img;
                     picture.appendChild(image);
                 }
             };
