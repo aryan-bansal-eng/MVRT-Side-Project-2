@@ -31,7 +31,7 @@
             text-align: center;
             text-decoration: none;
             font-size: 16px;
-            margin: 4px 2px;
+            margin: 0px auto;
             cursor: pointer;
             display: inline-block;
         }
@@ -50,9 +50,7 @@
 <body>
     <!-- Creates video tag in container-->
     <div id = "container">
-        <br></br>
         <p>Here is your video: </p>
-        <br></br>
         <video autoplay = "true" id = "videoElement">Your video goes here</video>
     </div>
     
@@ -84,17 +82,13 @@
     
     <!-- This division makes the button -->
     <div class = "center">
-        <br> </br>
         <p> Click this button to capture your video: </p>
-        <br> </br>
         <button class = "button button1" onClick = "takePicture()">Capture Video</button>
     </div>
     
     <!-- This division makes the picture -->
     <div id = "Picture">
-        <br> </br>
         <p> Here is where your picture will show up once you click the button:</p>
-        <br> </br>
         <canvas id = "canvas" width = "500" height = "375"></canvas>
     </div>
 </body>
