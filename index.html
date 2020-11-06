@@ -44,12 +44,14 @@
 </head>
 
 <body>
+    <!-- Creates video tag in container-->
     <div id = "container">
         <video autoplay = "true" id = "videoElement">
 
         </video>
     </div>
     
+    <!-- Accessess video from webcam -->
     <script>
         var video = document.querySelector("#videoElement");
 
@@ -64,10 +66,10 @@
         }
     </script>
     
+    <!-- When the user pressess the button, it takes a picture-->
     <script>
         function takePicture()
         {
-            console.log("in");
             var video = document.getElementById("videoElement");
             var canvas = document.getElementById("canvas");
             var context = canvas.getContext("2d");
@@ -75,10 +77,14 @@
         }
     </script>
     
+    <!-- This division makes the button -->
     <div class = "center">
         <button class = "button button1" onClick = "takePicture()">Capture Video</button>
     </div>
-        
-    <canvas id = "canvas" width = "500" height = "375"></canvas>
+    
+    <!-- This division makes the picture -->
+    <div class = "center">
+        <canvas id = "canvas" width = "500" height = "375"></canvas>
+    </div>
 </body>
 </html>
