@@ -68,17 +68,10 @@
         function takePicture()
         {
             console.log("in");
-            document.querySelector("#container"), 
-            {
-                onrendered : function(canvas)
-                {
-                    console.log("inner");
-                    var img = canvas.toDataURL();
-                    var image = document.createElement("img");
-                    image.src = img;
-                    picture.appendChild(image);
-                }
-            };
+            var video = document.getElementById("videoElement");
+            var canvas = document.getElementById("canvas");
+            var context = document.getContext("2d");
+            context.drawImage(video, 0, 0, 500, 375);
         }
     </script>
     
@@ -86,7 +79,6 @@
         <button class = "button button1" onClick = "takePicture()">Capture Video</button>
     </div>
         
-    <div id = "picture">
-    </div>
+    <canvas id = "canvas" width = "500" height = "375"></canvas>
 </body>
 </html>
