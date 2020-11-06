@@ -70,7 +70,7 @@
             console.log("in");
             var video = document.getElementById("videoElement");
             var canvas = document.getElementById("canvas");
-            var context = document.getContext("2d");
+            var context = canvas.getContext("2d");
             context.drawImage(video, 0, 0, 500, 375);
         }
     </script>
