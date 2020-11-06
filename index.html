@@ -71,7 +71,11 @@
         function takePicture()
         {
             var video = document.getElementById("videoElement");
-            var canvas = document.getElementById("canvas");
+            var canvas = document.createElement("canvas");
+            canvas.id = "canvas";
+            canvas.width = "500";
+            canvas.height = "375";
+            Picture.appendChild(canvas);
             var context = canvas.getContext("2d");
             context.drawImage(video, 0, 0, 500, 375);
         }
@@ -83,8 +87,7 @@
     </div>
     
     <!-- This division makes the picture -->
-    <div class = "center">
-        <canvas id = "canvas" width = "500" height = "375"></canvas>
+    <div class = "center" id = 'Picture">
     </div>
 </body>
 </html>
